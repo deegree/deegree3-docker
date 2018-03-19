@@ -1,5 +1,5 @@
 [![deegree-docker](http://dockeri.co/image/deegree/deegree3)](https://hub.docker.com/r/deegree/deegree3/)
-# deegree webservices on Docker
+# deegree web services on Docker
 Official Dockerfile for deegree web services. This repository contains a ```Dockerfile``` for building Docker images containing ready-to-use deegree webservices.
  
 Please consult the [deegree documentation](http://www.deegree.org/Documentation) for further information how to 
