@@ -3,7 +3,7 @@ FROM tomcat:8.5-jre8
 MAINTAINER deegree TMC <tmc@deegree.org>
 
 # set deegree version
-ENV DEEGREE_VERSION 3.4.10
+ENV DEEGREE_VERSION 3.4.11
 
 EXPOSE 8080
 
