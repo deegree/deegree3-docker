@@ -1,6 +1,6 @@
 # Supported tags and respective `Dockerfile` links
 
-- `v3.4.12` (`latest`), `v3.4.11`, `v3.4.10`, `v3.4.9`, `v3.4.8`, `v3.4.7`, `v3.4.6`, `v3.4.5`, `v3.4.4`, `v3.4.3`, `v3.4.2`, `v3.4.1`, `v3.4.0` - [Dockerfile](https://github.com/deegree/deegree3-docker/blob/master/Dockerfile)
+- `v3.4.13` (`latest`), `v3.4.12`, `v3.4.11`, `v3.4.10`, `v3.4.9`, `v3.4.8`, `v3.4.7`, `v3.4.6`, `v3.4.5`, `v3.4.4`, `v3.4.3`, `v3.4.2`, `v3.4.1`, `v3.4.0` - [Dockerfile](https://github.com/deegree/deegree3-docker/blob/master/Dockerfile)
 
 # Quick reference
 
