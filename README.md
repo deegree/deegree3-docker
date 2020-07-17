@@ -30,5 +30,14 @@ All images are based on the official Apache Tomcat 8.5+ with OpenJDK 8 image.
 To start a docker container with the name `deegree` on port 8080 run the following command:
 
 ```
-docker run --name deegree -p 8080:8080 deegree/deegree3-docker
+docker run --name deegree -d -p 8080:8080 deegree/deegree3-docker
 ```
+Running the image with `-d` runs the container in detached mode, leaving the container running in the background. 
+The `-p` flag redirects a public port to a private port inside the container.
+
+To access the deegree webservices console use a browser of your choice and open the URL:
+
+http://<container_ip>:8080/deegree-webservices/, the container_ip depends on the docker networking mode.
+http://localhost:8080/deegree-webservices/ should work with bridge mode.
+
+Continue with configuration of deegree as described in the [getting started guide](https://download.deegree.org/documentation/current/html/#anchor-lightly) of the deegree webservices handbook.
