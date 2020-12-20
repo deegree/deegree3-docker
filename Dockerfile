@@ -1,14 +1,18 @@
-FROM tomcat:8.5-jre8
+# This file is available under the following license:
+# under LGPL 2.1 (LICENSE.TXT) Copyright 2020 Torsten Friebe <tfr@users.sourceforge.net>
 
-MAINTAINER deegree TMC <tmc@deegree.org>
+FROM tomcat:8.5-jdk8
+
+LABEL maintainer="deegree TMC <tmc@deegree.org>"
 
 # set deegree version
 ENV DEEGREE_VERSION 3.4.14
 
 EXPOSE 8080
 
-# download deegree 
+# download deegree webservices webapp
 RUN wget http://repo.deegree.org/content/repositories/public/org/deegree/deegree-webservices/${DEEGREE_VERSION}/deegree-webservices-${DEEGREE_VERSION}.war -O /usr/local/tomcat/webapps/deegree-webservices.war
+RUN export CATALINA_OPTS="-Djavax.xml.transform.TransformerFactory=com.sun.org.apache.xalan.internal.xsltc.trax.TransformerFactoryImpl"
 
 # run tomcat
 CMD ["catalina.sh", "run"]
