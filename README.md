@@ -52,7 +52,7 @@ After you have started the container you can run the deegree CLI tools with:
 docker exec -w /opt/deegree-tools-config/bin deegree ./d3config -help
 ```
 
-Now you can use the deegree CLI to generate configuration files based on an GML application schema use the following command:
+Now you can use the deegree CLI to generate configuration files based on an GML application schema using the following command:
 
 ```
 docker exec -w /opt/deegree-tools-config/bin deegree ./d3config SqlFeatureStoreConfigCreator --format=all --dialect=postgis --cycledepth=1 https://inspire.ec.europa.eu/schemas/ps/4.0/ProtectedSites.xsd
