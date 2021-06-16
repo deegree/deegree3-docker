@@ -6,7 +6,8 @@ FROM tomcat:8.5-jdk8
 LABEL maintainer="deegree TMC <tmc@deegree.org>"
 
 # set deegree version
-ENV DEEGREE_VERSION 3.4.16
+ENV DEEGREE_VERSION=3.4.16
+ENV CATALINA_OPTS="-Djavax.xml.transform.TransformerFactory=net.sf.saxon.TransformerFactoryImpl"
 
 EXPOSE 8080
 
@@ -19,8 +20,6 @@ RUN wget http://repo.deegree.org/content/repositories/public/org/deegree/deegree
 RUN unzip /tmp/deegree-tools-config.zip -d /opt/ && \
     ln -s /opt/deegree-tools-config-${DEEGREE_VERSION}/ /opt/deegree-tools-config && \
     rm /tmp/deegree-tools-config.zip
-
-RUN export CATALINA_OPTS="-Djavax.xml.transform.TransformerFactory=net.sf.saxon.TransformerFactoryImpl"
 
 # run tomcat
 CMD ["catalina.sh", "run"]
