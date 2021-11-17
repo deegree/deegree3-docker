@@ -17,7 +17,8 @@ RUN curl http://repo.deegree.org/content/repositories/public/org/deegree/deegree
 #download deegree tools command line interface
 RUN curl http://repo.deegree.org/content/repositories/public/org/deegree/deegree-tools-config/${DEEGREE_VERSION}/deegree-tools-config-${DEEGREE_VERSION}-distribution.zip -o /tmp/deegree-tools-config.zip
 
-RUN unzip /tmp/deegree-tools-config.zip -d /opt/ && \
+RUN apt-get update && apt-get -yq install unzip && \
+    unzip /tmp/deegree-tools-config.zip -d /opt/ && \
     ln -s /opt/deegree-tools-config-${DEEGREE_VERSION}/ /opt/deegree-tools-config && \
     rm /tmp/deegree-tools-config.zip
 
