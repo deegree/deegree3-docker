@@ -1,6 +1,6 @@
 # Supported tags and respective `Dockerfile` links
 
-- `v3.4.19` (`latest`), `v3.4.18`, `v3.4.17`, `v3.4.16`, `v3.4.15`, `v3.4.14`, `v3.4.13`, `v3.4.12`, `v3.4.11`, `v3.4.10`, `v3.4.9`, `v3.4.8`, `v3.4.7`, `v3.4.6`, `v3.4.5`, `v3.4.4`, `v3.4.3`, `v3.4.2`, `v3.4.1`, `v3.4.0` - [Dockerfile](https://github.com/deegree/deegree3-docker/blob/master/Dockerfile)
+- `v3.4.20` (`latest`), `v3.4.19`, `v3.4.18`, `v3.4.17`, `v3.4.16`, `v3.4.15`, `v3.4.14`, `v3.4.13`, `v3.4.12`, `v3.4.11`, `v3.4.10`, `v3.4.9`, `v3.4.8`, `v3.4.7`, `v3.4.6`, `v3.4.5`, `v3.4.4`, `v3.4.3`, `v3.4.2`, `v3.4.1`, `v3.4.0` - [Dockerfile](https://github.com/deegree/deegree3-docker/blob/master/Dockerfile)
 
 # Quick reference
 
@@ -49,14 +49,13 @@ Continue with configuration of deegree as described in the [getting started guid
 After you have started the container you can run the deegree CLI tools with:
 
 ```
-docker exec -w /opt/deegree-tools-config/bin deegree ./d3config -help
+docker exec -w /opt deegree java -jar deegree-tools-gml.jar -help
 ```
 
 Now you can use the deegree CLI to generate configuration files based on an GML application schema using the following command:
 
 ```
-docker exec -w /opt/deegree-tools-config/bin deegree ./d3config SqlFeatureStoreConfigCreator --format=all --dialect=postgis --cycledepth=1 https://inspire.ec.europa.eu/schemas/ps/4.0/ProtectedSites.xsd
+docker exec -w /opt/ deegree java -jar deegree-tools-gml.jar FeatureStoreConfigLoader --format=all --dialect=postgis --cycledepth=1 -schemaUrl=https://inspire.ec.europa.eu/schemas/ps/4.0/ProtectedSites.xsd
 ```
 
 Read further in the [deegree webservices handbook](https://download.deegree.org/documentation/current/html/) how to use the deegree command-line interface.
-
