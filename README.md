@@ -1,6 +1,7 @@
 # Supported tags and respective `Dockerfile` links
 
-- `v3.4.32` (`latest`), `v3.4.31`, `v3.4.29`, `v3.4.28`, `v3.4.26`, `v3.4.25`, `v3.4.24`, `v3.4.23`, `v3.4.22`, `v3.4.20`, `v3.4.19`, `v3.4.18`, `v3.4.17`, `v3.4.16`, `v3.4.15`, `v3.4.14`, `v3.4.13`, `v3.4.12`, `v3.4.10`, `v3.4.9`, `v3.4.8`, `v3.4.7`, `v3.4.6`, `v3.4.5`, `v3.4.4`, `v3.4.3`, `v3.4.2`, `v3.4.1`, `v3.4.0` - [Dockerfile](https://github.com/deegree/deegree3-docker/blob/master/Dockerfile)
+- 3.5.x: `3.5.0`, `3.5`, `latest` - [Dockerfile](https://github.com/deegree/deegree3-docker/blob/main/3.5/Dockerfile)
+- 3.4.x : `v3.4.32`, `v3.4.31`, `v3.4.29`, `v3.4.28`, `v3.4.26`, `v3.4.25`, `v3.4.24`, `v3.4.23`, `v3.4.22`, `v3.4.20`, `v3.4.19`, `v3.4.18`, `v3.4.17`, `v3.4.16`, `v3.4.15`, `v3.4.14`, `v3.4.13`, `v3.4.12`, `v3.4.10`, `v3.4.9`, `v3.4.8`, `v3.4.7`, `v3.4.6`, `v3.4.5`, `v3.4.4`, `v3.4.3`, `v3.4.2`, `v3.4.1`, `v3.4.0` - [Dockerfile](https://github.com/deegree/deegree3-docker/blob/main/3.4/Dockerfile)
 
 # Quick reference
 
@@ -25,15 +26,13 @@ Use the following command to pull the latest image:
 docker pull deegree/deegree3-docker:latest
 ```
 
-All images are based on the official Apache Tomcat 8.5+ with OpenJDK 8 image.
-
 To start a docker container with the name `deegree` on port 8080 run the following command:
 
 ```
-docker run --name deegree -d -p 8080:8080 deegree/deegree3-docker
+docker run -d --name deegree -p 8080:8080 deegree/deegree3-docker:latest
 ```
-Running the image with `-d` runs the container in detached mode, leaving the container running in the background. 
-The `-p` flag redirects a public port to a private port inside the container. The `--name` flag is setting the name for the container.
+Running the image with `-d` runs the container in detached mode, leaving the container running in the background.
+The `--name` flag is setting the name for the container. The `-p` flag redirects a public port to a private port inside the container.
 
 ### How to access deegree administration console
 
