@@ -1,7 +1,7 @@
 # Supported tags and respective `Dockerfile` links
 
 - 3.5.x: `3.5.0`, `3.5`, `latest` - [Dockerfile](https://github.com/deegree/deegree3-docker/blob/main/3.5/Dockerfile)
-- 3.4.x : `v3.4.33`, `v3.4.32`, `v3.4.31`, `v3.4.29`, `v3.4.28`, `v3.4.26`, `v3.4.25`, `v3.4.24`, `v3.4.23`, `v3.4.22`, `v3.4.20`, `v3.4.19`, `v3.4.18`, `v3.4.17`, `v3.4.16`, `v3.4.15`, `v3.4.14`, `v3.4.13`, `v3.4.12`, `v3.4.10`, `v3.4.9`, `v3.4.8`, `v3.4.7`, `v3.4.6`, `v3.4.5`, `v3.4.4`, `v3.4.3`, `v3.4.2`, `v3.4.1`, `v3.4.0` - [Dockerfile](https://github.com/deegree/deegree3-docker/blob/main/3.4/Dockerfile)
+- 3.4.x : `v3.4.33`, `v3.4` (deprecated tags: `v3.4.32`, `v3.4.31`, `v3.4.29`, `v3.4.28`, `v3.4.26`, `v3.4.25`, `v3.4.24`, `v3.4.23`, `v3.4.22`, `v3.4.20`, `v3.4.19`, `v3.4.18`, `v3.4.17`, `v3.4.16`, `v3.4.15`, `v3.4.14`, `v3.4.13`, `v3.4.12`, `v3.4.10`, `v3.4.9`, `v3.4.8`, `v3.4.7`, `v3.4.6`, `v3.4.5`, `v3.4.4`, `v3.4.3`, `v3.4.2`, `v3.4.1`, `v3.4.0`) - [Dockerfile](https://github.com/deegree/deegree3-docker/blob/main/3.4/Dockerfile)
 
 # Quick reference
 
@@ -57,4 +57,4 @@ Now you can use the deegree CLI to generate configuration files based on an GML 
 docker exec -w /opt/ deegree java -jar deegree-tools-gml.jar SqlFeatureStoreConfigCreator --format=all --dialect=postgis --cycledepth=1 -schemaUrl=https://inspire.ec.europa.eu/schemas/ps/4.0/ProtectedSites.xsd
 ```
 
-Read further in the [deegree webservices handbook](https://download.deegree.org/documentation/current/html/) how to use the deegree command-line interface.
+Read further in the [deegree webservices handbook](https://download.deegree.org/documentation/current/html/#deegree-gml-tools) how to use the deegree command-line interface.
