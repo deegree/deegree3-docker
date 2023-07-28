@@ -10,11 +10,10 @@ ENV DEEGREE_WORKSPACE_ROOT=/root/.deegree
 ENV CATALINA_OPTS="-Djavax.xml.transform.TransformerFactory=net.sf.saxon.TransformerFactoryImpl -Dlog.dir=$CATALINA_HOME/logs"
 
 WORKDIR /usr/local/tomcat/webapps/
-EXPOSE 8080
-
 # download deegree webservices WAR file
 RUN curl https://repo.deegree.org/content/repositories/public/org/deegree/deegree-webservices/${DEEGREE_VERSION}/deegree-webservices-${DEEGREE_VERSION}.war -o /usr/local/tomcat/webapps/deegree-webservices.war && \
     curl https://repo.deegree.org/content/repositories/public/org/deegree/deegree-tools-gml/${DEEGREE_VERSION}/deegree-tools-gml-${DEEGREE_VERSION}.jar -o /opt/deegree-tools-gml.jar
 
+EXPOSE 8080
 # run tomcat
 CMD ["catalina.sh", "run"]

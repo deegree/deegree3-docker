@@ -29,7 +29,7 @@ jobs:
           context: ./3.4
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: deegree/deegree3-docker:v3.4.33,deegree/deegree3-docker:v3.4
+          tags: deegree/deegree3-docker:v3.4.34,deegree/deegree3-docker:v3.4
   build-3_5:
     runs-on: ubuntu-latest
     steps:
