@@ -45,4 +45,4 @@ jobs:
           context: ./3.5
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: deegree/deegree3-docker:3.5.2,deegree/deegree3-docker:3.5,deegree/deegree3-docker:latest
+          tags: deegree/deegree3-docker:3.5.3,deegree/deegree3-docker:3.5,deegree/deegree3-docker:latest
