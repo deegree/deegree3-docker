@@ -1,3 +1,5 @@
+[![Docker Image CI](https://github.com/deegree/deegree3-docker/actions/workflows/docker-image.yaml/badge.svg)](https://github.com/deegree/deegree3-docker/actions/workflows/docker-image.yaml)
+
 # Supported tags and respective `Dockerfile` links
 
 - deegree 3.5.x (JDK 11/Tomcat 9): `3.5.3`, `3.5`, `latest` (deprecated tags: `3.5.2`, `3.5.1`, `3.5.0`) - [Dockerfile](https://github.com/deegree/deegree3-docker/blob/main/3.5/Dockerfile)
