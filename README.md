@@ -56,7 +56,7 @@ docker exec -w /opt deegree java -jar deegree-tools-gml.jar -help
 Now you can use the deegree CLI to generate configuration files based on an GML application schema using the following command:
 
 ```
-docker exec -w /opt/ deegree java -jar deegree-tools-gml.jar SqlFeatureStoreConfigCreator --format=all --dialect=postgis --cycledepth=1 -schemaUrl=https://inspire.ec.europa.eu/schemas/ps/4.0/ProtectedSites.xsd
+docker exec -w /opt/ deegree java -jar deegree-tools-gml.jar SqlFeatureStoreConfigCreator -format=all -dialect=postgis -cycledepth=1 -schemaUrl=https://inspire.ec.europa.eu/schemas/ps/4.0/ProtectedSites.xsd
 ```
 
 Read further in the [deegree webservices handbook](https://download.deegree.org/documentation/current/html/#deegree-gml-tools) how to use the deegree command-line interface.
