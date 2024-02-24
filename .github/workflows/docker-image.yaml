@@ -46,3 +46,21 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: deegree/deegree3-docker:3.5.5,deegree/deegree3-docker:3.5,deegree/deegree3-docker:latest
+  build-3_6:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: docker/setup-qemu-action@v2
+      - uses: docker/setup-buildx-action@v2
+      - name: Login to Docker Hub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+      - name: Build and push v3.6
+        uses: docker/build-push-action@v4
+        with:
+          context: ./3.6
+          platforms: linux/amd64,linux/arm64
+          push: true
+          tags: deegree/deegree3-docker:3.6.0,deegree/deegree3-docker:3.6
