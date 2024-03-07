@@ -5,7 +5,7 @@ FROM tomcat:8.5-jdk8-temurin
 LABEL maintainer="deegree TMC <tmc@deegree.org>"
 
 # set deegree version
-ENV DEEGREE_VERSION=3.4.34
+ENV DEEGREE_VERSION=3.4.35
 ENV CATALINA_OPTS="-Djavax.xml.transform.TransformerFactory=net.sf.saxon.TransformerFactoryImpl"
 
 EXPOSE 8080
