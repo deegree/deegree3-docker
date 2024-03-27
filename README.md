@@ -3,8 +3,8 @@
 # Supported tags and respective `Dockerfile` links
 
 - deegree 3.6.x (JDK 17/Tomcat 10.1): `3.6.0`, `3.6` - [Dockerfile](https://github.com/deegree/deegree3-docker/blob/main/3.6/Dockerfile)
-- deegree 3.5.x (JDK 11/Tomcat 9): `3.5.5`, `3.5`, `latest` (deprecated tags: `3.5.4`, `3.5.3`, `3.5.2`, `3.5.1`, `3.5.0`) - [Dockerfile](https://github.com/deegree/deegree3-docker/blob/main/3.5/Dockerfile)
-- deegree 3.4.x (JDK 8/Tomcat 8.5): `v3.4.34`, `v3.4`, `3.4` (deprecated tags: `v3.4.33`, `v3.4.32`, `v3.4.31`, `v3.4.29`, `v3.4.28`, `v3.4.26`, `v3.4.25`, `v3.4.24`, `v3.4.23`, `v3.4.22`, `v3.4.20`, `v3.4.19`, `v3.4.18`, `v3.4.17`, `v3.4.16`, `v3.4.15`, `v3.4.14`, `v3.4.13`, `v3.4.12`, `v3.4.10`, `v3.4.9`, `v3.4.8`, `v3.4.7`, `v3.4.6`, `v3.4.5`, `v3.4.4`, `v3.4.3`, `v3.4.2`, `v3.4.1`, `v3.4.0`) - [Dockerfile](https://github.com/deegree/deegree3-docker/blob/main/3.4/Dockerfile)
+- deegree 3.5.x (JDK 11/Tomcat 9): `3.5.6`, `3.5`, `latest` (deprecated tags: `3.5.5`, `3.5.4`, `3.5.3`, `3.5.2`, `3.5.1`, `3.5.0`) - [Dockerfile](https://github.com/deegree/deegree3-docker/blob/main/3.5/Dockerfile)
+- deegree 3.4.x (JDK 8/Tomcat 8.5): `v3.4.35`, `v3.4`, `3.4` (deprecated tags: `v3.4.34`, `v3.4.33`, `v3.4.32`, `v3.4.31`, `v3.4.29`, `v3.4.28`, `v3.4.26`, `v3.4.25`, `v3.4.24`, `v3.4.23`, `v3.4.22`, `v3.4.20`, `v3.4.19`, `v3.4.18`, `v3.4.17`, `v3.4.16`, `v3.4.15`, `v3.4.14`, `v3.4.13`, `v3.4.12`, `v3.4.10`, `v3.4.9`, `v3.4.8`, `v3.4.7`, `v3.4.6`, `v3.4.5`, `v3.4.4`, `v3.4.3`, `v3.4.2`, `v3.4.1`, `v3.4.0`) - [Dockerfile](https://github.com/deegree/deegree3-docker/blob/main/3.4/Dockerfile)
 
 # Quick reference
 
