@@ -45,7 +45,7 @@ jobs:
           context: ./3.5
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: deegree/deegree3-docker:3.5.7,deegree/deegree3-docker:3.5,deegree/deegree3-docker:latest
+          tags: deegree/deegree3-docker:3.5.8,deegree/deegree3-docker:3.5,deegree/deegree3-docker:latest
   build-3_6:
     runs-on: ubuntu-latest
     steps:
