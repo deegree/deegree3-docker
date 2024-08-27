@@ -15,6 +15,7 @@ ARG DEEGREE_VERSION=3.6.0-pre2
 
 # API key to use; if empty will not change API key
 ENV DEEGREE_API_KEY=
+# console password to use; if empty not effective
 ENV DEEGREE_CONSOLE_PWD=
 
 ENV DEEGREE_WORKSPACE_ROOT=/root/.deegree
