@@ -1,5 +1,5 @@
 # This file is available under the following license:
-# under LGPL 2.1 (LICENSE.TXT) Copyright 2023 Torsten Friebe <tfr@users.sourceforge.net>
+# under LGPL 2.1 (LICENSE.TXT) Copyright 2025 Torsten Friebe <tfr@users.sourceforge.net>
 FROM tomcat:9-jdk11
 
 ARG BUILD_DATE

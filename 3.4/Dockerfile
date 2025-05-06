@@ -1,6 +1,6 @@
 # This file is available under the following license:
-# under LGPL 2.1 (LICENSE.TXT) Copyright 2020 Torsten Friebe <tfr@users.sourceforge.net>
-FROM tomcat:8.5-jdk8-temurin
+# under LGPL 2.1 (LICENSE.TXT) Copyright 2025 Torsten Friebe <tfr@users.sourceforge.net>
+FROM tomcat:9-jdk8
 
 LABEL maintainer="deegree TMC <tmc@deegree.org>"
 
