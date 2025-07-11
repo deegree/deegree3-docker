@@ -11,10 +11,10 @@ LABEL maintainer="deegree TMC <tmc@deegree.org>" \
   org.opencontainers.image.revision=$VCS_REF
 
 # set deegree version
-ARG DEEGREE_VERSION=3.5.13
+ARG DEEGREE_VERSION=3.5.14
 ENV DEEGREE_WORKSPACE_ROOT=/root/.deegree
 ENV CATALINA_OPTS="-Djavax.xml.transform.TransformerFactory=net.sf.saxon.TransformerFactoryImpl -Dlog.dir=$CATALINA_HOME/logs"
-ENV LANG en_US.UTF-8
+ENV LANG=en_US.UTF-8
 
 WORKDIR /usr/local/tomcat/webapps/
 # download deegree webservices WAR file
