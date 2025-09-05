@@ -11,7 +11,7 @@ LABEL maintainer="deegree TMC <tmc@deegree.org>" \
   org.opencontainers.image.revision=$VCS_REF
 
 # set deegree version
-ARG DEEGREE_VERSION=3.6.0
+ARG DEEGREE_VERSION=3.6.1
 # API key to use; if empty will not change API key
 ENV DEEGREE_API_KEY=
 # console password to use; if empty not effective
