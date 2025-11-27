@@ -11,11 +11,11 @@ LABEL maintainer="deegree TMC <tmc@deegree.org>" \
   org.opencontainers.image.revision=$VCS_REF
 
 # set deegree version
-ARG DEEGREE_VERSION=3.6.3
+ARG DEEGREE_VERSION=3.6.4
 # API key to use; if empty will not change API key
-ENV DEEGREE_API_KEY=
+ENV DEEGREE_API_KEY
 # console password to use; if empty not effective
-ENV DEEGREE_CONSOLE_PWD=
+ENV DEEGREE_CONSOLE_PWD
 
 ENV DEEGREE_WORKSPACE_ROOT=/root/.deegree
 ENV CATALINA_OPTS="-Djavax.xml.transform.TransformerFactory=net.sf.saxon.TransformerFactoryImpl -Dlog.dir=$CATALINA_HOME/logs"
