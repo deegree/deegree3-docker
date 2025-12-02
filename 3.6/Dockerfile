@@ -13,10 +13,10 @@ LABEL maintainer="deegree TMC <tmc@deegree.org>" \
 # set deegree version
 ARG DEEGREE_VERSION=3.6.4
 # API key to use; if empty will not change API key
-ENV DEEGREE_API_KEY
+ENV DEEGREE_API_KEY=
 # console password to use; if empty not effective
-ENV DEEGREE_CONSOLE_PWD
-
+ENV DEEGREE_CONSOLE_PWD=
+# deegree workspace folder
 ENV DEEGREE_WORKSPACE_ROOT=/root/.deegree
 ENV CATALINA_OPTS="-Djavax.xml.transform.TransformerFactory=net.sf.saxon.TransformerFactoryImpl -Dlog.dir=$CATALINA_HOME/logs"
 ENV JAVA_OPTS="--add-opens java.base/java.lang=ALL-UNNAMED --add-opens java.desktop/com.sun.imageio.spi=ALL-UNNAMED --add-opens java.desktop/javax.imageio.spi=ALL-UNNAMED --add-exports java.desktop/sun.awt=ALL-UNNAMED --add-exports java.desktop/com.sun.imageio.spi=ALL-UNNAMED --add-exports java.desktop/sun.swing=ALL-UNNAMED --add-opens java.desktop/javax.imageio.spi=ALL-UNNAMED"
@@ -28,5 +28,7 @@ RUN curl https://repo.deegree.org/repository/public/org/deegree/deegree-webservi
     curl https://repo.deegree.org/repository/public/org/deegree/deegree-tools-gml/${DEEGREE_VERSION}/deegree-tools-gml-${DEEGREE_VERSION}.jar -o /opt/deegree-tools-gml.jar
 
 EXPOSE 8080
-# run tomcat
-CMD ["catalina.sh", "run"]
+# apply apikey, password and run tomcat
+CMD ([ -z "$DEEGREE_API_KEY" ] || (echo $DEEGREE_API_KEY > $DEEGREE_WORKSPACE_ROOT/config.apikey)) \
+ && ([ -z "$DEEGREE_CONSOLE_PW" ] || (openssl passwd -5 $DEEGREE_CONSOLE_PW > $DEEGREE_WORKSPACE_ROOT/console.pw)) \
+ && /usr/local/tomcat/bin/catalina.sh run
