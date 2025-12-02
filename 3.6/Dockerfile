@@ -12,6 +12,7 @@ LABEL maintainer="deegree TMC <tmc@deegree.org>" \
 
 # set deegree version
 ARG DEEGREE_VERSION=3.6.4
+
 # API key to use; if empty will not change API key
 ENV DEEGREE_API_KEY=
 # console password to use; if empty not effective
@@ -27,6 +28,10 @@ WORKDIR /usr/local/tomcat/webapps/
 RUN curl https://repo.deegree.org/repository/public/org/deegree/deegree-webservices/${DEEGREE_VERSION}/deegree-webservices-${DEEGREE_VERSION}.war -o /usr/local/tomcat/webapps/deegree-webservices.war && \
     curl https://repo.deegree.org/repository/public/org/deegree/deegree-tools-gml/${DEEGREE_VERSION}/deegree-tools-gml-${DEEGREE_VERSION}.jar -o /opt/deegree-tools-gml.jar
 
+VOLUME $DEEGREE_WORKSPACE_ROOT
+WORKDIR $DEEGREE_WORKSPACE_ROOT
+
+#tomcat port
 EXPOSE 8080
 # apply apikey, password and run tomcat
 CMD ([ -z "$DEEGREE_API_KEY" ] || (echo $DEEGREE_API_KEY > $DEEGREE_WORKSPACE_ROOT/config.apikey)) \
