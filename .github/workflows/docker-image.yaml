@@ -1,5 +1,5 @@
 # This file is available under the following license:
-# under LGPL 2.1 (LICENSE.TXT) Copyright 2023 Torsten Friebe <tfr@users.sourceforge.net>
+# under LGPL 2.1 (LICENSE.TXT) Copyright 2026 Torsten Friebe <tfr@users.sourceforge.net>
 name: Docker Image CI
 
 on:
@@ -63,7 +63,7 @@ jobs:
           context: ./3.6
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: deegree/deegree3-docker:3.6.7,deegree/deegree3-docker:3.6,deegree/deegree3-docker:latest
+          tags: deegree/deegree3-docker:3.6.8,deegree/deegree3-docker:3.6,deegree/deegree3-docker:latest
           build-args: |
             BUILD_DATE=${{ github.event.head_commit.timestamp }}
             VCS_REF=${{ github.sha }}
